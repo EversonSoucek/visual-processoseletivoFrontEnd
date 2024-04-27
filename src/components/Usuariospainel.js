@@ -1,7 +1,20 @@
-import React from 'react'
-import { Link} from 'react-router-dom';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 export default function UsuariosPainel() {
+
+    const [usuarios, setUsuarios] = useState([])
+
+    useEffect(() => {
+        carregaUsuarios();
+    },[])
+
+    const carregaUsuarios = async () => {
+        const resultado = await axios.get("http://localhost:3500/")
+        setUsuarios(resultado.data)
+    }
+
     return (
         <div className='container'>
             <div className='py-4'>
@@ -18,18 +31,22 @@ export default function UsuariosPainel() {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope='row'>1</th>
-                            <td>nome</td>
-                            <td>cpf</td>
-                            <td>e-mail</td>
-                            <td>número</td>
-                            <td>
-                                <Link className='btn btn-primary mx-3'>Visualizar</Link>
-                                <Link className='btn btn-outline-primary mx-3'>Editar</Link>
-                                <Link className='btn btn-danger mx-3'>Deletar</Link>
-                            </td>
-                        </tr>
+                        {
+                            usuarios.map((usuario, index) => (
+                                <tr key={index}>
+                                    <th scope='row'>1</th>
+                                    <td>{usuario.nome}</td>
+                                    <td>{usuario.cpf}</td>
+                                    <td>{usuario.email}</td>
+                                    <td>{usuario.numero}</td>
+                                    <td>
+                                        <Link className='btn btn-primary mx-3'>Visualizar</Link>
+                                        <Link className='btn btn-outline-primary mx-3'>Editar</Link>
+                                        <Link className='btn btn-danger mx-3'>Deletar</Link>
+                                    </td>
+                                </tr>
+                            ))
+                        }
                     </tbody>
                 </table>
             </div>
