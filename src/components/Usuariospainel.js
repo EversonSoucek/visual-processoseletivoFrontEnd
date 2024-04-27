@@ -34,7 +34,7 @@ export default function UsuariosPainel() {
                         {
                             usuarios.map((usuario, index) => (
                                 <tr key={index}>
-                                    <th scope='row'>1</th>
+                                    <th scope='row'>{usuario.id}</th>
                                     <td>{usuario.nome}</td>
                                     <td>{usuario.cpf}</td>
                                     <td>{usuario.email}</td>
