@@ -8,11 +8,16 @@ export default function UsuariosPainel() {
 
     useEffect(() => {
         carregaUsuarios();
-    },[])
+    }, [])
 
     const carregaUsuarios = async () => {
         const resultado = await axios.get("http://localhost:3500/")
         setUsuarios(resultado.data)
+    }
+
+    const deletaUsuario = async (index) => {
+        await axios.delete(`http://localhost:3500/${index}`)
+        carregaUsuarios()
     }
 
     return (
@@ -42,7 +47,7 @@ export default function UsuariosPainel() {
                                     <td>
                                         <Link className='btn btn-primary mx-3'>Visualizar</Link>
                                         <Link className='btn btn-outline-primary mx-3'>Editar</Link>
-                                        <Link className='btn btn-danger mx-3'>Deletar</Link>
+                                        <button className='btn btn-danger mx-3' onClick={() => deletaUsuario(usuario.id)}>Deletar</button>
                                     </td>
                                 </tr>
                             ))
