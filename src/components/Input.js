@@ -1,10 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-export default function Input({ children, tipo, nome, onChange }) {
-
+export default function Input({ children, tipo, nome, onChange,valor}) {
     const handleChange = (e) => {
-        onChange(e)
-    }
+        onChange(e); 
+    };
 
     return (
         <div className="mb-3">
@@ -15,8 +14,9 @@ export default function Input({ children, tipo, nome, onChange }) {
                 placeholder={`Digite seu ${children}`}
                 name={nome}
                 onChange={handleChange}
+                value={valor}
                 required={true}
             />
         </div>
-    )
+    );
 }

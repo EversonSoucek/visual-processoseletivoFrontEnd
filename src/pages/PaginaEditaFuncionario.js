@@ -1,12 +1,12 @@
 import React from 'react'
 import Cabecalho from '../components/Cabecalho'
-import Form from '../components/Forms/Form'
+import FormEdita from '../components/Forms/FormEdita'
 
-export default function PaginaAdicionaUsuario() {
+export default function PaginaEditaFuncionario() {
     return (
         <>
             <Cabecalho />
-            <Form/>
+            <FormEdita/>
         </>
 
     )

@@ -1,17 +1,23 @@
-import React, { useEffect} from 'react';
+import React, { useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
-import { useUsuarioContext } from '../common/context/UsuarioContext';
+import axios from 'axios';
 
 export default function UsuariosPainel() {
-    const { usuarios, carregaUsuarios, deletaUsuario } = useUsuarioContext();
+    const [usuarios, setUsuarios] = useState([])
 
     useEffect(() => {
-        const carregar = async () => {
-            await carregaUsuarios();
-        };
-        carregar();
-    }, [carregaUsuarios]);
+        carregaUsuarios();
+    }, [])
 
+    const carregaUsuarios = async () => {
+        const resultado = await axios.get("http://localhost:3500/")
+        setUsuarios(resultado.data)
+    }
+
+    const deletaUsuario = async (index) => {
+        await axios.delete(`http://localhost:3500/${index}`)
+        carregaUsuarios()
+    }
     return (
         <div className='container'>
             <div className='py-4'>
@@ -35,8 +41,7 @@ export default function UsuariosPainel() {
                                 <td>{usuario.email}</td>
                                 <td>{usuario.numero}</td>
                                 <td>
-                                    <Link className='btn btn-primary mx-3'>Visualizar</Link>
-                                    <Link to={"/editausuario"} className='btn btn-outline-primary mx-3'>Editar</Link>
+                                    <Link to={`/editausuario/${usuario.id}`} className='btn btn-outline-primary mx-3'>Editar</Link>
                                     <button className='btn btn-danger mx-3' onClick={() => deletaUsuario(usuario.id)}>Deletar</button>
                                 </td>
                             </tr>
