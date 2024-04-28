@@ -1,23 +1,29 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 export default function UsuariosPainel() {
-    const [usuarios, setUsuarios] = useState([])
+    const [usuarios, setUsuarios] = useState([]);
 
     useEffect(() => {
         carregaUsuarios();
-    }, [])
+    }, []);
 
     const carregaUsuarios = async () => {
-        const resultado = await axios.get("http://localhost:3500/")
-        setUsuarios(resultado.data)
-    }
+        const resultado = await axios.get("http://localhost:3500/");
+        setUsuarios(resultado.data);
+    };
 
-    const deletaUsuario = async (index) => {
-        await axios.delete(`http://localhost:3500/${index}`)
-        carregaUsuarios()
-    }
+    const deletaUsuario = async (id) => {
+        await axios.delete(`http://localhost:3500/${id}`);
+        carregaUsuarios();
+    };
+
+    const formataNumero = (numero) => {
+        const num = numero.toString();
+        return num.replace(/(\d{2})(\d{4,5})(\d{4})/, '($1) $2-$3'); // Regex que vai formatar o número 
+    };
+
     return (
         <div className='container'>
             <div className='py-4'>
@@ -27,8 +33,8 @@ export default function UsuariosPainel() {
                             <th scope="col">#</th>
                             <th scope="col">Nome</th>
                             <th scope="col">CPF</th>
-                            <th scope="col">e-mail</th>
-                            <th scope="col">número</th>
+                            <th scope="col">E-mail</th>
+                            <th scope="col">Número</th>
                             <th scope="col">Ação</th>
                         </tr>
                     </thead>
@@ -39,7 +45,7 @@ export default function UsuariosPainel() {
                                 <td>{usuario.nome}</td>
                                 <td>{usuario.cpf}</td>
                                 <td>{usuario.email}</td>
-                                <td>{usuario.numero}</td>
+                                <td>{usuario.numero ? formataNumero(usuario.numero) : 'N/A'}</td>
                                 <td>
                                     <Link to={`/editausuario/${usuario.id}`} className='btn btn-outline-primary mx-3'>Editar</Link>
                                     <button className='btn btn-danger mx-3' onClick={() => deletaUsuario(usuario.id)}>Deletar</button>
