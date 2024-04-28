@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Front-end Processo Seletivo Visual Software
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div style:>
+    <img src="https://img.shields.io/badge/Status-Completo-brightgreen">
+    <img src='https://img.shields.io/github/languages/top/EversonSoucek/visual-processoseletivoFrontEnd'>
+    <img src='https://img.shields.io/github/languages/code-size/EversonSoucek/visual-processoseletivoFrontEnd'>
+</div>
 
-## Available Scripts
+Este é o front-end do projeto, feito um crud com react com uma conexão ao banco de dados mysql
 
-In the project directory, you can run:
+<img src='./image.png'>
 
-### `npm start`
+## :hammer: Funcionalidade do projeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Um sistema com as funcionalidades de adicionar, editar e deletar usuários com todas essas operações ligadas ao um banco de dados mysql
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## :wrench: Técnicas e tecnologias utilizadas
 
-### `npm test`
+- ⚛️ `React`
+- 📡 `React router dom`
+- 🅱️ `Bootstrap`
+- ↕️ `Axios`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :file_folder: Acesso ao projeto
 
-### `npm run build`
+Primeira opção:
+Você pode acessa o projeto e baixar ele pelo <a href="https://github.com/EversonSoucek/visual-processoseletivoFrontEnd">Github</a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## :computer: Rodar o projeto
+ 
+Com o servidor do back-end rodando abrir e rodar o projeto execute no terminal `npm i` para instalar as dependências e `npm start` para iniciar o projeto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Depois, acesse <a href="http://localhost:3000/">http://localhost:3000/</a> no seu navegador
 
-### `npm run eject`
+## :pencil: Autores
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src='https://avatars.githubusercontent.com/u/105561519?v=4' width=115><br><sub>Everson Adolfo Soucek Junior</sub>(https://github.com/EversonSoucek)
