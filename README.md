@@ -26,12 +26,16 @@ Um sistema com as funcionalidades de adicionar, editar e deletar usuários com t
 Primeira opção:
 Você pode acessa o projeto e baixar ele pelo <a href="https://github.com/EversonSoucek/visual-processoseletivoFrontEnd">Github</a>
 
+Segunda opção:
+Entrar no projeto pelo <a href="https://visual-processoseletivo.vercel.app/">link</a> 
 
 ## :computer: Rodar o projeto
  
 Com o servidor do back-end rodando abrir e rodar o projeto execute no terminal `npm i` para instalar as dependências e `npm start` para iniciar o projeto
 
 Depois, acesse <a href="http://localhost:3000/">http://localhost:3000/</a> no seu navegador
+
+Ou pode acessar pelo <a href="https://visual-processoseletivo.vercel.app/">link</a> 
 
 ## :pencil: Autores
 
