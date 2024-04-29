@@ -15,7 +15,7 @@ export default function PaginaEditaFuncionario() {
 
     useEffect(() => {
         const carregarDados = async () => {
-            const resultado = await axios.get(`http://localhost:3500/${id}`);
+            const resultado = await axios.get(`https://processo-seletivo-backend-9ae3435cd654.herokuapp.com/${id}`);
             const data = resultado.data;
             setUsuario({
                 nome: data.nome || '',

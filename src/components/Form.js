@@ -16,9 +16,9 @@ const Form = ({ usuario, setUsuario, id = null }) => {
         };
 
         if (id) {
-            await axios.put(`http://localhost:3500/${id}`, dadosParaEnviar);
+            await axios.put(`https://processo-seletivo-backend-9ae3435cd654.herokuapp.com/${id}`, dadosParaEnviar);
         } else {
-            await axios.post("http://localhost:3500/", dadosParaEnviar);
+            await axios.post("https://processo-seletivo-backend-9ae3435cd654.herokuapp.com/", dadosParaEnviar);
         }
         navegar("/");
     };

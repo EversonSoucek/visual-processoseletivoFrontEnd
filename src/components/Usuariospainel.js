@@ -10,12 +10,12 @@ export default function UsuariosPainel() {
     }, []);
 
     const carregaUsuarios = async () => {
-        const resultado = await axios.get("http://localhost:3500/");
+        const resultado = await axios.get("https://processo-seletivo-backend-9ae3435cd654.herokuapp.com/");
         setUsuarios(resultado.data);
     };
 
     const deletaUsuario = async (id) => {
-        await axios.delete(`http://localhost:3500/${id}`);
+        await axios.delete(`https://processo-seletivo-backend-9ae3435cd654.herokuapp.com/${id}`);
         carregaUsuarios();
     };
 

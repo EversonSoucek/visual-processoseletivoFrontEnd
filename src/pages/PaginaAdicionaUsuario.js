@@ -20,7 +20,7 @@ export default function PaginaAdicionaUsuario() {
             ...usuario,
             numero: limparNumero(usuario.numero),
         };
-        await axios.post("http://localhost:3500/", dadosParaEnviar);
+        await axios.post("https://processo-seletivo-backend-9ae3435cd654.herokuapp.com/", dadosParaEnviar);
         navegar("/");
     };
 
